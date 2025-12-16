@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alex Martins | Personal Trainer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <div>
+                    <div class="logo">
+                        <img src="assets/img/logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <nav>
+
+                <ul id="menuList">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+
+                <!-- Overlay escuro -->
+                <div id="menuOverlay" class="menu-overlay"></div>
+
+                <!-- Menu lateral -->
+                <div id="sideMenu" class="side-menu">
+                    <ul>
+                        <li><a href="#home" onclick="closeMenu()">Início</a></li>
+                        <li><a href="#especialidades" onclick="closeMenu()">Especialidades</a></li>
+                        <li><a href="#valores" onclick="closeMenu()">Valores</a></li>
+                        <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+                        <li><a href="#valores" onclick="closeMenu()">Agendar aulas</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div>
+                <button class="cta-btn" id="agendarTop">Agendar aula</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <h1>Transforme seu corpo com treinos personalizados</h1>
+                    <p>Treinos individuais, progressão orientada e acompanhamento completo para você atingir seus
+                        objetivos com segurança.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary" id="agendarHero">Agendar minha aula</button>
+                        <button class="btn-secondary"
+                            onclick="document.getElementById('especialidades').scrollIntoView({behavior:'smooth'})">Conhecer
+                            especialidades</button>
+                    </div>
+                </div>
+                <div
+                    style="width:100%;max-width:380px;display:flex;justify-content:center;align-items:center;margin:auto">
+
+                    <div
+                        style="background:rgba(255,255,255,0.04);padding:18px;border-radius:12px;max-width:320px;width:100%">
+                        <h4 style="margin:0 0 8px;font-family:Poppins">Aulas presenciais e online</h4>
+                        <p class="muted" style="margin:0 0 14px">Planos flexíveis para acompanhar sua rotina — iniciante
+                            ao avançado.</p>
+                        <ul style="margin:0 0 12px;padding-left:18px;color:var(--muted)">
+                            <li>Treino individualizado</li>
+                            <li>Correção de técnica</li>
+                            <li>Planos mensais</li>
+                        </ul>
+                        <button class="btn-primary" style="width:100%" onclick="openContact()">Quero conversar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="especialidades">
+            <div class="section-title">
+                <h2>Especialidades</h2>
+                <p>Programas pensados para cada objetivo — do iniciante ao atleta</p>
+            </div>
+
+            <div class="grid specials container">
+                <div class="card">
+                    <div>
+                        <div class="card-icon">
+                            <!-- dumbbell svg -->
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="9" width="2" height="6" fill="#fff" />
+                                <rect x="20" y="9" width="2" height="6" fill="#fff" />
+                                <rect x="6" y="8" width="12" height="8" rx="2" fill="#fff" />
+                            </svg>
+                        </div>
+                        <h3>Hipertrofia</h3>
+                        <p>Treinos estruturados para ganho de massa muscular e definição com progressão de cargas.</p>
+                    </div>
+                    <div class="muted">Ideal para: quem busca volume e definição</div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">
+                            <!-- flame svg -->
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C12 2 8 6 8 10c0 2.5 2 4 4 6 2 2 4 0 4 0s0-6-4-10z" fill="#fff" />
+                            </svg>
+                        </div>
+                        <h3>Emagrecimento</h3>
+                        <p>Protocolos com foco em queima calórica, treinos de alta intensidade e reeducação de hábitos.
+                        </p>
+                    </div>
+                    <div class="muted">Ideal para: queimar gordura sem perder massa magra</div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">
+                            <!-- heart/fitness svg -->
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21s-7-4.35-9-7c-1.4-1.9-1-5 2-6 2-0.8 3.1 1.2 4 2 1 1 2 2 3 2s2-1 3-2c0.9-0.8 2-2.8 4-2 3 1 3.4 4.1 2 6-2 2.65-9 7-9 7z"
+                                    fill="#fff" />
+                            </svg>
+                        </div>
+                        <h3>Condicionamento</h3>
+                        <p>Melhore seu fôlego, resistência e mobilidade com treinos funcionais e cardiovasculares.</p>
+                    </div>
+                    <div class="muted">Ideal para: quem busca mais disposição e performance</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="valores">
+            <div class="section-title">
+                <h2>Valores</h2>
+                <p>Conheça os valores das aulas de acordo com sua necessidade!</p>
+            </div>
+
+            <div class="grid plans container">
+                <div class="plan">
+                    <div>
+                        <h4>Plano Hipertrofia</h4>
+                        <div class="desc">Treinos focados em ganho de massa muscular, progressão de cargas e técnicas de
+                            força.</div>
+                        <ul class="list">
+                            <li>3x por semana - Aulas de 60 min</li>
+                            <li>Programação mensal</li>
+                            <li>Avaliação inicial e ajuste semanal</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="price">A partir de R$ 140 / mês</div>
+                        <button class="btn-primary choose" onclick="selectPlan('Hipertrofia')">Quero esse plano</button>
+                    </div>
+                </div>
+
+                <div class="plan highlight">
+                    <div>
+                        <h4>Plano Emagrecimento <span
+                                style="background:var(--blue);color:#fff;padding:4px 8px;border-radius:10px;font-size:12px;margin-left:8px;font-weight:600">Mais
+                                escolhido</span></h4>
+                        <div class="desc">Treinos intensos e personalizados para perda de gordura com manutenção de
+                            massa magra.</div>
+                        <ul class="list">
+                            <li>3x por semana - Aulas de 50-60 min</li>
+                            <li>Treinos em circuito e HIIT</li>
+                            <li>Orientação nutricional básica</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="price">A partir de R$ 120 / mês</div>
+                        <button class="btn-primary choose" onclick="selectPlan('Emagrecimento')">Quero esse
+                            plano</button>
+                    </div>
+                </div>
+
+                <div class="plan">
+                    <div>
+                        <h4>Plano Condicionamento</h4>
+                        <div class="desc">Programa para melhorar resistência, mobilidade e performance cardiovascular.
+                        </div>
+                        <ul class="list">
+                            <li>2-3x por semana - Aulas de 40-50 min</li>
+                            <li>Treinos funcionais e rodízio de exercícios</li>
+                            <li>Foco em progressão segura</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="price">A partir de R$ 100 / mês</div>
+                        <button class="btn-primary choose" onclick="selectPlan('Condicionamento')">Quero esse
+                            plano</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="about-inner container">
+                <img src="assets/img/about.jpg" alt="Alex Martins">
+                <div class="bio">
+                    <h3>Sobre mim</h3>
+                    <p>Olá, eu sou o Alex Martins. Sou personal trainer e minha missão é ajudar você a alcançar seus
+                        objetivos de forma saudável e sustentável. Trabalho com hipertrofia, emagrecimento,
+                        condicionamento e treino funcional, priorizando técnica e evolução segura. Acredito em
+                        planejamento e na construção de hábitos — cada treino é pensado para você.</p>
+                    <p class="muted">Se quiser, agende uma aula experimental e vamos conversar sobre seus objetivos.</p>
+                    <div style="margin-top:12px"><button class="btn-primary" onclick="openContact()">Agendar aula
+                            experimental</button></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="max-width:var(--maxwidth);margin:0 auto;color:rgba(255,255,255,0.85)">© <strong>Alex
+                    Martins</strong> • Personal Trainer • Todos os direitos reservados</div>
+        </div>
+    </footer>
+
+    <!-- Modal (simples) -->
+    <div id="modal"
+        style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:200">
+        <div
+            style="background:#fff;padding:22px;border-radius:12px;max-width:480px;width:92%;box-shadow:0 18px 60px rgba(2,6,23,0.35)">
+            <h3 style="margin-top:0">Entrar em contato</h3>
+            <p style="margin:6px 0 16px;color:var(--muted)">Escolha uma das opções abaixo para continuar.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <a href="https://wa.me/5591999999999?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20plano"
+                    target="_blank" style="text-decoration:none;;"><button
+                        style="padding:10px 12px;border-radius:10px;cursor: pointer;border:0;background:#25D366;color:#fff;font-weight:700">WhatsApp</button></a>
+                <a href="mailto: alexmartins@gmail.com" target="_blank" style="text-decoration:none;;"><button
+                        style="padding:10px 12px;border-radius:10px;cursor: pointer;border:0;background:transparent;color:#000;font-weight:700">Enviar
+                        e-mail</button></a>
+                <button
+                    style="padding:10px 12px;border-radius:10px;border:0;background:var(--blue);color:#fff;font-weight:700; cursor: pointer;"
+                    onclick="closeModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
